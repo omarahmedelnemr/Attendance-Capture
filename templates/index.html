@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="../static/style.css">
+
+</head>
+<body>
+    <div id="title">
+        <!-- <h1>Hello From Attendance Tracker</h1> -->
+    </div>
+    <div id="mainBody">
+
+    <div id="orginal_image_container">
+        <div id="LoadingScreen" class="hidden">
+            <div id="loadingText">
+                <div id="loadingIcon"></div>
+                <p id="loadingStatus">Proccessing</p>
+                
+            </div>
+        </div>
+        <img src="./" alt="Original Image" class="hidden" id="org_image"/>
+        <img src="./" alt="Original Image" class="hidden" id="predicted_image"/>
+        <span id="imageName" class="hidden"></span>
+        <div id="file_upload" onclick="uploadOnClick()">
+            <span>Click to Upload a Picture</span>
+            <form id="uploadForm" class="hidden">
+                <input id="uploadButton" type="file" name="file" accept=".png, .jpg, .jpeg" onchange="submitForm()">
+            </form>    
+        </div>
+    </div>
+    <div id="control_panel">
+        <p id="ShowError" class="hidden"></p>
+        <input type="text" placeholder="Class Code: " id="classNameInput" name="classCode"/>
+        <button onclick="sendPredict()">Detect Faces</button>
+        <button id="showPredictedButton" class="hidden" onclick="showPredicted()">Display Boxes</button>
+        <button id="showOriginalButton" class="hidden" onclick="showOriginal()">Show Original</button>
+        <button id="DownloadSheetButton" class="hidden" onclick="downloadSheet()">Download xlsx Sheet</button>
+        <button id="DownloadCSVSheetButton" class="hidden" onclick="downloadCSVSheet()">Download CSV Sheet</button>
+        <!-- <p id="responseData">.</p> -->
+    </div>
+    <div id="faces_container_frame">
+        <div id="faces_container" class="hide_labels">
+        </div>
+    </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
