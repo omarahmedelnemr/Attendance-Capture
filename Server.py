@@ -12,28 +12,58 @@ app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16 MB limit
 @app.route('/')
 def index():
     return render_template('index.html')
+def generate_random_filename():
+    return ''.join(str(random.randint(0, 9)) for _ in range(8)) + ".jpg"
+
+# @app.route('/upload', methods=['POST'])
+# def upload_file():
+#     try:
+
+#         if 'file' not in request.files:
+#             return "Error"#redirect(request.url)
+
+#         file = request.files['file']
+#         print("Files:",file)
+#         if file.filename == '':
+#             return "Error"#redirect(request.url)
+
+#         if file:
+#             random_numbers_as_strings = ''.join(str(random.randint(0, 9)) for _ in range(8))
+#             print(random_numbers_as_strings)
+#             file.save(os.path.join(app.config['UPLOAD_FOLDER'], random_numbers_as_strings + ".jpg"))
+#             # return redirect('/')
+#             return random_numbers_as_strings + ".jpg"
+#     except Exception as e:
+#         print("Error!",e)
+#         return f"Error Happend: {str(e)}"
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
     try:
-
         if 'file' not in request.files:
-            return "Error"#redirect(request.url)
+            return "Error"
 
         file = request.files['file']
-        print("Files:",file)
         if file.filename == '':
-            return "Error"#redirect(request.url)
+            return "Error"
 
-        if file:
-            random_numbers_as_strings = ''.join(str(random.randint(0, 9)) for _ in range(8))
-            print(random_numbers_as_strings)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], random_numbers_as_strings + ".jpg"))
-            # return redirect('/')
-            return random_numbers_as_strings + ".jpg"
+        random_filename = generate_random_filename()
+        file_path = os.path.join(app.config['UPLOAD_FOLDER'], random_filename)
+
+        # Stream and save the file in chunks
+        chunk_size = 4096  # You can adjust the chunk size based on your needs
+        with open(file_path, 'wb') as f:
+            while True:
+                chunk = file.stream.read(chunk_size)
+                if not chunk:
+                    break
+                f.write(chunk)
+
+        return random_filename
     except Exception as e:
-        print("Error!",e)
-        return f"Error Happend: {str(e)}"
+        print("Error:", e)
+        return f"Error Happened: {str(e)}"
+
 
 @app.route('/file/<filename>')
 def get_file(filename):
