@@ -66,7 +66,6 @@ async function sendPredict(){
     var data = JSON.stringify({ imageName: imageName, classCode : document.getElementById("classNameInput").value.toUpperCase() });
 
     xhr.onreadystatechange =async  function() {
-        document.getElementById("body").classList.add("dark")
 
         if (xhr.readyState == 4) {
             if (xhr.status == 200) {
