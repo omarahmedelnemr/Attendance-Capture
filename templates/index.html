@@ -34,13 +34,14 @@
     </div>
     <div id="control_panel">
         <p id="ShowError" class="hidden"></p>
+
+        <p id="ClassCodeTextNote">Enter Class Code To Create New or Modify Existed Attendance Sheet<br/>Try CSE</p>
         <input type="text" placeholder="Class Code: " id="classNameInput" name="classCode"/>
         <button onclick="sendPredict()">Detect Faces</button>
         <button id="showPredictedButton" class="hidden" onclick="showPredicted()">Display Boxes</button>
         <button id="showOriginalButton" class="hidden" onclick="showOriginal()">Show Original</button>
         <button id="DownloadSheetButton" class="hidden" onclick="downloadSheet()">Download xlsx Sheet</button>
         <button id="DownloadCSVSheetButton" class="hidden" onclick="downloadCSVSheet()">Download CSV Sheet</button>
-        <!-- <p id="responseData">.</p> -->
     </div>
     <div id="faces_container_frame">
         <div id="faces_container" class="hide_labels">

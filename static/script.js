@@ -173,7 +173,7 @@ function downloadSheet() {
         link.href = URL.createObjectURL(blob);
 
         // Set the download attribute with the desired filename
-        link.download = 'downloaded_sheet.xlsx';
+        link.download = document.getElementById("classNameInput").value + '_Attendance_sheet.xlsx';
 
         // Append the link to the document body
         document.body.appendChild(link);
@@ -221,7 +221,7 @@ function downloadCSVSheet() {
         link.href = URL.createObjectURL(blob);
 
         // Set the download attribute with the desired filename
-        link.download = 'downloaded_sheet.csv';
+        link.download = document.getElementById("classNameInput").value + '_Attendance_sheet.csv';
 
         // Append the link to the document body
         document.body.appendChild(link);
