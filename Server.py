@@ -15,28 +15,6 @@ def index():
 def generate_random_filename():
     return ''.join(str(random.randint(0, 9)) for _ in range(8)) + ".jpg"
 
-# @app.route('/upload', methods=['POST'])
-# def upload_file():
-#     try:
-
-#         if 'file' not in request.files:
-#             return "Error"#redirect(request.url)
-
-#         file = request.files['file']
-#         print("Files:",file)
-#         if file.filename == '':
-#             return "Error"#redirect(request.url)
-
-#         if file:
-#             random_numbers_as_strings = ''.join(str(random.randint(0, 9)) for _ in range(8))
-#             print(random_numbers_as_strings)
-#             file.save(os.path.join(app.config['UPLOAD_FOLDER'], random_numbers_as_strings + ".jpg"))
-#             # return redirect('/')
-#             return random_numbers_as_strings + ".jpg"
-#     except Exception as e:
-#         print("Error!",e)
-#         return f"Error Happend: {str(e)}"
-
 @app.route('/upload', methods=['POST'])
 def upload_file():
     try:
