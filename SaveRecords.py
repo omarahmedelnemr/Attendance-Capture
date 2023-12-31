@@ -18,7 +18,7 @@ def save_to_csv(name, provided_names):
 
         # Set the values to 1 for provided names in the new column
         df.loc[df['Names'].isin(provided_names), today_date] = 1
-        print("Date:",df.loc[df['Names'].isin(provided_names), today_date])
+
         # Save the updated DataFrame back to the file
         df.to_csv(file_path, index=False)
     else:
