@@ -9,12 +9,12 @@ def predict_image(image_name):
     image_path = "./uploads/" + image_name
 
     # Load the trained model
-    with open('./Models/model2/friend_face_recognition_model.pkl', 'rb') as model_file:
+    with open('./Models/model9/friend_face_recognition_model.pkl', 'rb') as model_file:
         classifier = pickle.load(model_file)
 
     # Load the label encoder
     label_encoder = LabelEncoder()
-    label_encoder.classes_ = np.load('./Models/model2/label_encoder_classes.npy')
+    label_encoder.classes_ = np.load('./Models/model9/label_encoder_classes.npy')
 
     # Load the image and find face locations and embeddings
     image = face_recognition.load_image_file(image_path)

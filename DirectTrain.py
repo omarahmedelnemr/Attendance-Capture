@@ -10,6 +10,7 @@ from tqdm import tqdm
 
 # Set path to the directory containing your dataset
 dataset_path = "./cleanedDataset"
+# dataset_path = "./processedDataset"
 
 # Create empty lists to store the embeddings and corresponding labels
 embeddings = []
@@ -51,10 +52,10 @@ accuracy = accuracy_score(y_test, y_pred)
 print(f'Test accuracy: {accuracy}')
 
 # Save the trained model using pickle
-with open('./Models/model3/friend_face_recognition_model.pkl', 'wb') as model_file:
+with open('./Models/model8/friend_face_recognition_model.pkl', 'wb') as model_file:
     pickle.dump(classifier, model_file)
 
 # Save the label encoder classes for later use during inference
 label_encoder = LabelEncoder()
 label_encoder.fit(y_train)
-np.save('./Models/model3/label_encoder_classes.npy', label_encoder.classes_)
+np.save('./Models/model8/label_encoder_classes.npy', label_encoder.classes_)

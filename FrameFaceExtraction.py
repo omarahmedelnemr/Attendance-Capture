@@ -34,7 +34,8 @@ def extract_frames(video_path, output_folder, frame_rate):
 
 def process_videos(videos_folder, output_root_folder, frame_rate):
     # List all video files in the specified folder
-    video_files = [f for f in os.listdir(videos_folder) if f.endswith(('.mp4', '.avi', '.mkv'))]
+    video_files = [f for f in os.listdir(videos_folder) if f.endswith(('.mp4', '.avi', '.mkv', '.MOV', '.mov'))]
+    # video_files = [f for f in os.listdir(videos_folder) if f.endswith(('.MOV'))]
     # Process each video
     for video_file in video_files:
         video_path = os.path.join(videos_folder, video_file)

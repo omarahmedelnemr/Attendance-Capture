@@ -1,4 +1,8 @@
-/vidoes
+/videos
 /edited
 /old
 /__pycache__
+/processedDataset/*
+/cleanedDataset/*
+/uploads/*
+/dataset
