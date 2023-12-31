@@ -51,7 +51,7 @@ async function sendPredict(){
         document.getElementById("ShowError").innerHTML = "You Must Write The Class Code"
         return 
     }
-    // document.getElementById("mainBody").classList.add("dark")
+    document.getElementById("mainBody").classList.add("dark")
     document.getElementById("ShowError").classList.add('hidden')
     document.getElementById("LoadingScreen").classList.remove("hidden")
     document.getElementById("loadingStatus").innerHTML = "Proccessing"
