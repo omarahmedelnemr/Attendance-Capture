@@ -111,6 +111,8 @@ async function sendPredict(){
                 document.getElementById("LoadingScreen").classList.add("hidden")
                 document.getElementById("DownloadSheetButton").classList.remove("hidden")
                 document.getElementById("DownloadCSVSheetButton").classList.remove("hidden")
+                document.getElementById("DetectFacesButton").classList.add("hidden")
+                document.getElementById("refreshPageButton").classList.remove("hidden")
             } else {
                 console.error('Error:', xhr.status);
             }
@@ -239,3 +241,7 @@ function downloadCSVSheet() {
     });
 }
 
+
+function refreshPage(){
+    document.location.reload(false)
+}

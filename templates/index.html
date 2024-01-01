@@ -37,7 +37,8 @@
 
         <p id="ClassCodeTextNote">Enter Class Code To Create New or Modify Existed Attendance Sheet<br/>Try CSE</p>
         <input type="text" placeholder="Class Code: " id="classNameInput" name="classCode"/>
-        <button onclick="sendPredict()">Detect Faces</button>
+        <button id="DetectFacesButton" onclick="sendPredict()">Detect Faces</button>
+        <button id="refreshPageButton" onclick="refreshPage()" class="hidden">Clear</button>
         <button id="showPredictedButton" class="hidden" onclick="showPredicted()">Display Boxes</button>
         <button id="showOriginalButton" class="hidden" onclick="showOriginal()">Show Original</button>
         <button id="DownloadSheetButton" class="hidden" onclick="downloadSheet()">Download xlsx Sheet</button>
