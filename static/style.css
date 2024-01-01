@@ -263,4 +263,8 @@ body:has(.dark){
         scroll-behavior: smooth;
     
     }
+    #ClassCodeTextNote{
+        text-align: center;
+
+    }
 }
