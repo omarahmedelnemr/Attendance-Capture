@@ -1,5 +1,7 @@
 import cv2
 import os
+import dlib
+
 total = 0
 def extract_frames(video_path, output_folder, frame_rate):
     global total
@@ -47,20 +49,8 @@ def process_videos(videos_folder, output_root_folder, frame_rate):
 
 # Detect the Face in an Images and Cut off the Background "Remove Noise"
 def extract_faces_from_images(input_folder, output_folder):
-    """
-    Read all images from the input folder, detect faces, and save the extracted faces
-    in the output folder with the same names.
-
-    Args:
-    - input_folder (str): Path to the input folder containing images.
-    - output_folder (str): Path to the output folder where the cleaned images will be stored.
-    """
-    # Create the output folder if it doesn't exist
-    os.makedirs(output_folder, exist_ok=True)
-
-    # Load the pre-trained face cascade classifier
-    face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
-
+    face_detector = dlib.get_frontal_face_detector()
+    
     # Loop through each subdirectory in the input folder
     for subfolder in os.listdir(input_folder):
         subfolder_path = os.path.join(input_folder, subfolder)
@@ -81,17 +71,22 @@ def extract_faces_from_images(input_folder, output_folder):
                     # Convert the image to grayscale for face detection
                     gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
-                    # Detect faces in the image
-                    faces = face_cascade.detectMultiScale(gray_image, scaleFactor=1.1, minNeighbors=4, minSize=(30, 30))
+                    # Detect faces in the image using dlib face detector
+                    faces = face_detector(gray_image)
 
                     # Extract and save each face
-                    for i, (x, y, w, h) in enumerate(faces):
-                        face = image[y:y+h, x:x+w]
+                    for i, face in enumerate(faces):
+                        # Get the coordinates of the face rectangle
+                        x, y, w, h = face.left(), face.top(), face.width(), face.height()
+
+                        # Extract the face from the image
+                        face_image = image[y:y + h, x:x + w]
+
+                        # Save the face to the output folder
                         output_face_path = os.path.join(output_subfolder_path, f"{image_name.replace('.jpg', f'_face_{i + 1}.jpg')}")
-                        cv2.imwrite(output_face_path, face)
+                        cv2.imwrite(output_face_path, face_image)
 
-                    print(f"{len(faces)} faces extracted from {image_name} and saved to {output_face_path}")
-
+                        print(f"Face {i + 1} extracted from {image_name} and saved to {output_face_path}")
 
 
 # Specify the input videos folder, output root folder, and frame rate

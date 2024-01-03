@@ -9,12 +9,12 @@ def predict_image(image_name):
     image_path = "./uploads/" + image_name
 
     # Load the trained model
-    with open('./Models/model7/friend_face_recognition_model.pkl', 'rb') as model_file:
+    with open('./Models/model14/friend_face_recognition_model.pkl', 'rb') as model_file:
         classifier = pickle.load(model_file)
 
-    # Load the label encoder
-    label_encoder = LabelEncoder()
-    label_encoder.classes_ = np.load('./Models/model7/label_encoder_classes.npy')
+    # # Load the label encoder
+    # label_encoder = LabelEncoder()
+    # label_encoder.classes_ = np.load('./Models/model7/label_encoder_classes.npy')
 
     # Load the image and find face locations and embeddings
     image = face_recognition.load_image_file(image_path)
@@ -60,8 +60,8 @@ def predict_image(image_name):
     
     # Draw rectangles and labels on the image
     for (top, right, bottom, left), label in zip(face_locations, predicted_labels):
-        cv2.rectangle(image, (left, top), (right, bottom), (0,143,255), 20)
-        cv2.putText(image, label, (left, top - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0,143,255), 10)
+        cv2.rectangle(image, (left, top), (right, bottom), (0,143,255), 2)
+        cv2.putText(image, label, (left, top - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0,143,255), 3)
 
     # Save the result image
     newImageName = image_name.split(".")[0]
