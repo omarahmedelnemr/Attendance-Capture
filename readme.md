@@ -2,6 +2,38 @@
 
 The Project is About Taking Class Attendance With only a Photo of the Class, it's Based on Computer Vision Methods To Extract The Faces Features in the Image and Detect Who Attended and Who Didn't
 
+## Front Side
+
+Our Front Side is Responsople For Using The Model With Easy User Experince. From uploading the Image And Display The Results, To Downloading the Attendance Sheet Updated
+
+![alt text](https://github.com/omarahmedelnemr/Attendance-Capture/blob/056dfc3e55f679ce8ae7a7d00784c0f51a610453/templates/Webpage%20Preview.png)
+
+### Step 1: Upload The Image
+
+When You Open the Webpage, You Will Find the Upload Button To Upload Your Image to the Server, Then You Have to Type the Code of The Class in Order to Name the Sheet. Then You Press on Detect Faces Button To Start Procceing
+
+![alt text](https://github.com/omarahmedelnemr/Attendance-Capture/blob/056dfc3e55f679ce8ae7a7d00784c0f51a610453/templates/Upload%Image.png)
+
+### Step 2: Results
+
+once You Click, the Server Start Procceing the Uploaded Image, Extratcing the Faces, Detecting each one's Identity, and Then Return images Paths on the Server to Display, and The Label For Each one
+
+![alt text](https://github.com/omarahmedelnemr/Attendance-Capture/blob/056dfc3e55f679ce8ae7a7d00784c0f51a610453/templates/proccessing%Image.png)
+
+![alt text](https://github.com/omarahmedelnemr/Attendance-Capture/blob/056dfc3e55f679ce8ae7a7d00784c0f51a610453/templates/results%Image.png)
+
+### Step 3: Attendance Sheet
+
+Along side with Detetcing the Student Names, The Server take the Class code and Search for a Sheet with the Same name, if Exist, The Server add a New Column With Today's Date, and Then Add the Attendace (0 For Absent, 1 For Attended), if the Files Doesn't Exist, it Create a Copy of The Base File (Called all.csv), Which have the Names and the IDs For All Class Student, And Then name it with the Given Class Code, and Add a Column With Today's Date and Add the Attendance. After All this, The Server Return a Link for this File To The Server To Download the Sheet
+
+### Step 4: Final Step
+
+After Everything is Done, The Front Page Will update the Control Buttons,New Buttons Will Display like: Download The Sheet, Display the Origianl/Annotated Image, Clear The Screen To Test New Image, and So on.
+
+![alt text](https://github.com/omarahmedelnemr/Attendance-Capture/blob/056dfc3e55f679ce8ae7a7d00784c0f51a610453/templates/Sheet%Image.png)
+
+## Here is The Phase to Get This Magic Done
+
 ## Phase 1: Training
 
 ### Step 1: Data Collection
@@ -29,33 +61,3 @@ as We Did for "Data Cleaning and Preproccessing", When We Take an Image as Input
 
 Now We Have to Feed our Input to the Model, and Let The Model Handle The Magic.
 When The We Give Our Data to the Model, the Model Respond with Some Output Number, after That User the Label Encoder, We Decode This Indexes into It's Labels, aka Students Names.
-
-## Phase 3: Front Side
-
-Our Front Side is Responsople For Using The Model With Easy User Experince. From uploading the Image And Display The Results, To Downloading the Attendance Sheet Updated
-
-![alt text](https://github.com/omarahmedelnemr/Attendance-Capture/blob/056dfc3e55f679ce8ae7a7d00784c0f51a610453/template/Webpage%20Preview.png)
-
-### Step 1: Upload The Image
-
-When You Open the Webpage, You Will Find the Upload Button To Upload Your Image to the Server, Then You Have to Type the Code of The Class in Order to Name the Sheet. Then You Press on Detect Faces Button To Start Procceing
-
-![alt text](https://github.com/omarahmedelnemr/Attendance-Capture/blob/056dfc3e55f679ce8ae7a7d00784c0f51a610453/template/Upload%Image.png)
-
-### Step 2: Results
-
-once You Click, the Server Start Procceing the Uploaded Image, Extratcing the Faces, Detecting each one's Identity, and Then Return images Paths on the Server to Display, and The Label For Each one
-
-![alt text](https://github.com/omarahmedelnemr/Attendance-Capture/blob/056dfc3e55f679ce8ae7a7d00784c0f51a610453/template/proccessing%Image.png)
-
-![alt text](https://github.com/omarahmedelnemr/Attendance-Capture/blob/056dfc3e55f679ce8ae7a7d00784c0f51a610453/template/results%Image.png)
-
-### Step 3: Attendance Sheet
-
-Along side with Detetcing the Student Names, The Server take the Class code and Search for a Sheet with the Same name, if Exist, The Server add a New Column With Today's Date, and Then Add the Attendace (0 For Absent, 1 For Attended), if the Files Doesn't Exist, it Create a Copy of The Base File (Called all.csv), Which have the Names and the IDs For All Class Student, And Then name it with the Given Class Code, and Add a Column With Today's Date and Add the Attendance. After All this, The Server Return a Link for this File To The Server To Download the Sheet
-
-### Step 4: Final Step
-
-After Everything is Done, The Front Page Will update the Control Buttons,New Buttons Will Display like: Download The Sheet, Display the Origianl/Annotated Image, Clear The Screen To Test New Image, and So on.
-
-![alt text](https://github.com/omarahmedelnemr/Attendance-Capture/blob/056dfc3e55f679ce8ae7a7d00784c0f51a610453/template/Sheet%Image.png)
