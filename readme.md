@@ -49,3 +49,4 @@ Along side with Detetcing the Student Names, The Server take the Class code and 
 ### Step4: Final Step
 
 After Everything is Done, The Front Page Will update the Control Buttons,New Buttons Will Display like: Download THe Sheet, Display the Origianl/Annotated Image, Clear The Screen To Test New Image, and So on.
+![plot](./static/Webpage Preview.png)
