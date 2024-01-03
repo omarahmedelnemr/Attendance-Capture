@@ -4,6 +4,24 @@ import pandas as pd
 from datetime import date
 
 def save_to_csv(name, provided_names):
+    """
+   Saves a record to a CSV file.
+
+   If the file already exists, it adds a new column with today's date and marks the provided names.
+   If the file doesn't exist, it creates a copy from 'all.csv' and then adds a new column with today's date and marks the provided names.
+
+   Parameters:
+   name (str): The name of the CSV file to save to. This file should be located in the './Records/' directory.
+   provided_names (list): A list of names to mark in the new column.
+
+   Returns:
+   print(f'- - The file {file_path} has been saved successfully! - -')
+
+
+   Example:
+   >>> save_to_csv('Crypto', ['Nady', 'Darwish'])
+   This will save a record to the 'Crypto.csv' file in the './Records/' directory.
+   """
     records_dir = "./Records"
     all_records_file = os.path.join(records_dir, "all.csv")
 
