@@ -16,7 +16,7 @@ When You Open the Webpage, You Will Find the Upload Button To Upload Your Image 
 
 ### Step 2: Results
 
-once You Click, the Server Start Procceing the Uploaded Image, Extratcing the Faces, Detecting each one's Identity, and Then Return images Paths on the Server to Display, and The Label For Each one
+once You Click, The Dark Mode is on and the Server Start Procceing the Uploaded Image, Extratcing the Faces, Detecting each one's Identity, and Then Return images Paths on the Server to Display, and The Label For Each one
 
 ![alt text](https://github.com/omarahmedelnemr/Attendance-Capture/blob/186f0db7bdad30d065c5ba356e27a09b55ea8c1a/templates/proccessing%20Image.png)
 
