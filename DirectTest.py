@@ -61,7 +61,7 @@ def predict_image(image_name):
     # Draw rectangles and labels on the image
     for (top, right, bottom, left), label in zip(face_locations, predicted_labels):
         cv2.rectangle(image, (left, top), (right, bottom), (0,143,255), 2)
-        cv2.putText(image, label, (left, top - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0,143,255), 3)
+        cv2.putText(image, label, (left, top - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0,143,255), 2)
 
     # Save the result image
     newImageName = image_name.split(".")[0]
