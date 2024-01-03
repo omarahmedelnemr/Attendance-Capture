@@ -9,7 +9,7 @@ def predict_image(image_name):
     image_path = "./uploads/" + image_name
 
     # Load the trained model
-    with open('./Models/model10/friend_face_recognition_model.pkl', 'rb') as model_file:
+    with open('./Models/model9/friend_face_recognition_model.pkl', 'rb') as model_file:
         classifier = pickle.load(model_file)
 
     # Load the label encoder
