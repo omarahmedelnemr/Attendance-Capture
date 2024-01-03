@@ -86,7 +86,7 @@ async function sendPredict(){
                     item.className = "face_image";
                     item.innerHTML = `
                             <img src="/file/${i.image_path}" />
-                            <label class=''>${i.label}</label>
+                            <label class=''>${i.label.replace("_"," ")}</label>
                     `;
                     container.appendChild(item);
                     
