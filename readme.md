@@ -12,15 +12,15 @@ Our Front Side is Responsople For Using The Model With Easy User Experince. From
 
 When You Open the Webpage, You Will Find the Upload Button To Upload Your Image to the Server, Then You Have to Type the Code of The Class in Order to Name the Sheet. Then You Press on Detect Faces Button To Start Procceing
 
-![alt text](https://github.com/omarahmedelnemr/Attendance-Capture/blob/5e118be915c85323d4da61c59f4128445043454e/templates/Upload%Image.png)
+![alt text](https://github.com/omarahmedelnemr/Attendance-Capture/blob/186f0db7bdad30d065c5ba356e27a09b55ea8c1a/templates/Upload%20Image.png)
 
 ### Step 2: Results
 
 once You Click, the Server Start Procceing the Uploaded Image, Extratcing the Faces, Detecting each one's Identity, and Then Return images Paths on the Server to Display, and The Label For Each one
 
-![alt text](https://github.com/omarahmedelnemr/Attendance-Capture/blob/5e118be915c85323d4da61c59f4128445043454e/templates/proccessing%Image.png)
+![alt text](https://github.com/omarahmedelnemr/Attendance-Capture/blob/186f0db7bdad30d065c5ba356e27a09b55ea8c1a/templates/proccessing%20Image.png)
 
-![alt text](https://github.com/omarahmedelnemr/Attendance-Capture/blob/5e118be915c85323d4da61c59f4128445043454e/templates/results%Image.png)
+![alt text](https://github.com/omarahmedelnemr/Attendance-Capture/blob/186f0db7bdad30d065c5ba356e27a09b55ea8c1a/templates/results%20Image.png)
 
 ### Step 3: Attendance Sheet
 
