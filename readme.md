@@ -6,21 +6,21 @@ The Project is About Taking Class Attendance With only a Photo of the Class, it'
 
 Our Front Side is Responsople For Using The Model With Easy User Experince. From uploading the Image And Display The Results, To Downloading the Attendance Sheet Updated
 
-![alt text](https://github.com/omarahmedelnemr/Attendance-Capture/blob/056dfc3e55f679ce8ae7a7d00784c0f51a610453/templates/Webpage%20Preview.png)
+![alt text](https://github.com/omarahmedelnemr/Attendance-Capture/blob/5e118be915c85323d4da61c59f4128445043454e/templates/Webpage%20Preview.png)
 
 ### Step 1: Upload The Image
 
 When You Open the Webpage, You Will Find the Upload Button To Upload Your Image to the Server, Then You Have to Type the Code of The Class in Order to Name the Sheet. Then You Press on Detect Faces Button To Start Procceing
 
-![alt text](https://github.com/omarahmedelnemr/Attendance-Capture/blob/056dfc3e55f679ce8ae7a7d00784c0f51a610453/templates/Upload%Image.png)
+![alt text](https://github.com/omarahmedelnemr/Attendance-Capture/blob/5e118be915c85323d4da61c59f4128445043454e/templates/Upload%Image.png)
 
 ### Step 2: Results
 
 once You Click, the Server Start Procceing the Uploaded Image, Extratcing the Faces, Detecting each one's Identity, and Then Return images Paths on the Server to Display, and The Label For Each one
 
-![alt text](https://github.com/omarahmedelnemr/Attendance-Capture/blob/056dfc3e55f679ce8ae7a7d00784c0f51a610453/templates/proccessing%Image.png)
+![alt text](https://github.com/omarahmedelnemr/Attendance-Capture/blob/5e118be915c85323d4da61c59f4128445043454e/templates/proccessing%Image.png)
 
-![alt text](https://github.com/omarahmedelnemr/Attendance-Capture/blob/056dfc3e55f679ce8ae7a7d00784c0f51a610453/templates/results%Image.png)
+![alt text](https://github.com/omarahmedelnemr/Attendance-Capture/blob/5e118be915c85323d4da61c59f4128445043454e/templates/results%Image.png)
 
 ### Step 3: Attendance Sheet
 
@@ -30,7 +30,7 @@ Along side with Detetcing the Student Names, The Server take the Class code and 
 
 After Everything is Done, The Front Page Will update the Control Buttons,New Buttons Will Display like: Download The Sheet, Display the Origianl/Annotated Image, Clear The Screen To Test New Image, and So on.
 
-![alt text](https://github.com/omarahmedelnemr/Attendance-Capture/blob/056dfc3e55f679ce8ae7a7d00784c0f51a610453/templates/Sheet%Image.png)
+![alt text](https://github.com/omarahmedelnemr/Attendance-Capture/blob/5e118be915c85323d4da61c59f4128445043454e/templates/Sheet%20Image.png)
 
 ## Here is The Phase to Get This Magic Done
 
